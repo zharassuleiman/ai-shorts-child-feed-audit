@@ -17,7 +17,6 @@
 | RQ3 | macro-F1 (multimodal) ≤ macro-F1 (metadata-only) | macro-F1 (multimodal) exceeds the baseline by at least 0.05 |
 
 
-## 4
 Note: the no-dwell arm (accounts that do not watch videos to the end) is an additional control group. It is not part of the H0/H1 comparison for RQ2, but it helps to check whether the AI share changes even without any watching.
 ## 4. Variable Matrix
 | RQ | Independent variables | Dependent variables | Controlled variables |
