@@ -1,0 +1,27 @@
+# Environments
+.venv/
+venv/
+env/
+.env
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+# Jupyter
+.ipynb_checkpoints/
+# Logs, results, OS
+*.log
+results/*
+!results/.gitkeep
+.DS_Store
+# Binary data and model weights (collected video/audio/frames, checkpoints)
+data/frames/
+*.mp4
+*.wav
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.onnx
+*.pkl
+.idea/
