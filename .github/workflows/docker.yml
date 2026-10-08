@@ -1,0 +1,16 @@
+name: docker-build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t shorts-audit .
+      - name: Run pipeline on sample data
+        run: docker run --rm shorts-audit
