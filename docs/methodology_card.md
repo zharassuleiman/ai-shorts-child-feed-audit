@@ -3,7 +3,7 @@
 ## 1. Project Information
 - **Title:** Prevalence and Algorithmic Amplification of AI-Generated Child-Directed Short Videos on YouTube Shorts: a Sock-Puppet Audit with Multimodal Detection
 - **Author:** Zharas Suleiman
-- **GitHub repository:** https://github.com/<zharassuleiman>/ai-shorts-child-feed-audit
+- **GitHub repository:** https://github.com/zharassuleiman/ai-shorts-child-feed-audit
 
 ## 2. Research Type
 **Quantitative.** The study measures numbers: the share of AI-generated videos in a feed, how this share changes after watching, and the F1 score of a classifier. Each research question is answered with a statistical test and a fixed significance level (alpha = 0.05), so the results can be checked and repeated by someone else. The only qualitative part is the codebook used to label videos as AI-generated or human-made, and it serves only to prepare the data.

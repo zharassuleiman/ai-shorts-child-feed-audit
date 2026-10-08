@@ -56,7 +56,7 @@ Docker >= 24, **or** Python 3.12 with `pip install -r requirements.txt`.
 ## Quickstart
 
 ```bash
-git clone https://github.com/<zharassuleiman>/ai-shorts-child-feed-audit.git && cd ai-shorts-child-feed-audit
+git clone https://github.com/zharassuleiman/ai-shorts-child-feed-audit.git && cd ai-shorts-child-feed-audit
 docker build -t shorts-audit .
 docker run --rm shorts-audit
 ```
