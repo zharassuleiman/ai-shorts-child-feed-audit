@@ -16,7 +16,7 @@ How much AI-generated content do YouTube Shorts feeds served to child-profile ac
 
 ## Overview
 
-A sock-puppet audit: automated child and adult profiles collect public YouTube Shorts recommendations under a fixed session protocol and three watch-policy arms (AI-dwell, human-dwell, no-dwell). Collected videos are annotated with a codebook (Cohen's kappa >= 0.70) and used to train and evaluate AI-generation detectors. **No real children and no personal data are involved; only public content is analysed and results are reported in aggregate.**
+In this project I study what kind of videos YouTube Shorts shows to children. I create test accounts that look like children and test accounts that look like adults, and I record the first 100 shorts each account is recommended. I then check how many of these videos are AI-generated. In the second part, accounts watch AI-generated videos to the end, or human-made videos to the end, or nothing, and I measure whether the share of AI videos in their feed grows afterwards. In the third part, I label the collected videos by hand and test whether a classifier that uses video, audio and metadata finds AI videos better than one that uses metadata only. No real children and no personal data are used: only public videos and automatic accounts, and the results are reported in aggregate.
 
 > The files in `data/sample/` are **synthetic** micro-samples used only to verify that the pipeline runs. They are not real measurements.
 

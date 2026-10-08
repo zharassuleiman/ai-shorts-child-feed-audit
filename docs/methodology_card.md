@@ -6,15 +6,19 @@
 - **GitHub repository:** https://github.com/<zharas07>/ai-shorts-child-feed-audit
 
 ## 2. Research Type
-**Quantitative.** All three research questions reduce to numeric outcomes (share of AI-generated content, change in that share, macro-F1) and are tested with statistical tests at a fixed significance level. The only qualitative element is the annotation codebook, which supports labelling and is not a standalone analysis method.
+**Quantitative.** The study measures numbers: the share of AI-generated videos in a feed, how this share changes after watching, and the F1 score of a classifier. Each research question is answered with a statistical test and a fixed significance level (alpha = 0.05), so the results can be checked and repeated by someone else. The only qualitative part is the codebook used to label videos as AI-generated or human-made, and it serves only to prepare the data.
 
 ## 3. Hypotheses (from Task 1, refined)
+
 | RQ | H0 | H1 |
 |----|----|----|
 | RQ1 | p_child = p_adult | p_child > p_adult (one-sided, α = 0.05) |
 | RQ2 | Mean change in AI share after 5 sessions is equal across watch policies | Change is larger in the AI-dwell arm than in the human-dwell arm |
 | RQ3 | macro-F1 (multimodal) ≤ macro-F1 (metadata-only) | macro-F1 (multimodal) exceeds the baseline by at least 0.05 |
 
+
+## 4
+Note: the no-dwell arm (accounts that do not watch videos to the end) is an additional control group. It is not part of the H0/H1 comparison for RQ2, but it helps to check whether the AI share changes even without any watching.
 ## 4. Variable Matrix
 | RQ | Independent variables | Dependent variables | Controlled variables |
 |----|-----------------------|---------------------|----------------------|
