@@ -1,0 +1,9 @@
+session_id,profile_type,n_videos,n_ai_generated
+c01,child,100,31
+c02,child,100,27
+c03,child,100,35
+c04,child,100,29
+a01,adult,100,12
+a02,adult,100,9
+a03,adult,100,15
+a04,adult,100,11

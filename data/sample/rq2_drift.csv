@@ -1,0 +1,9 @@
+account_id,arm,ai_share_baseline,ai_share_session5
+w01,ai_dwell,0.20,0.34
+w02,ai_dwell,0.22,0.37
+w03,ai_dwell,0.19,0.30
+w04,human_dwell,0.21,0.23
+w05,human_dwell,0.20,0.19
+w06,human_dwell,0.23,0.26
+w07,no_dwell,0.20,0.21
+w08,no_dwell,0.22,0.22

@@ -1,0 +1,24 @@
+experiment:
+  name: ai_shorts_child_feed_audit
+  seed: 42
+  alpha: 0.05
+rq1:
+  path: data/sample/rq1_feeds.csv
+  min_sessions_per_group: 3
+rq2:
+  path: data/sample/rq2_drift.csv
+  treatment_arm: ai_dwell
+  control_arm: human_dwell
+  min_accounts_per_arm: 3
+rq3:
+  path: data/sample/rq3_videos.csv
+  label_column: label_ai
+  metadata_features: [meta_title_len, meta_has_ai_tag]
+  visual_features: [visual_artifact_score]
+  audio_features: [audio_synthetic_score]
+  test_size: 0.4
+  min_improvement: 0.05
+output:
+  results_path: results/result.json
+timeouts:
+  run_seconds: 60
