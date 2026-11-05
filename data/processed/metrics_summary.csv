@@ -1,0 +1,60 @@
+rq,metric,group,n,value,ci_low,ci_high,note
+data,warmup_sessions_dropped,feed,20,20.0000,,,cold-start sessions discarded
+RQ1,mean_pct,adult,8,13.0136,10.0048,15.6891,95% bootstrap CI of the mean
+RQ1,sd_pct,adult,8,4.4378,,,
+RQ1,median_pct,adult,8,13.7926,,,
+RQ1,p25_pct,adult,8,10.8897,,,
+RQ1,p75_pct,adult,8,15.8479,,,
+RQ1,p95_pct,adult,8,17.8888,,,
+RQ1,p99_pct,adult,8,18.2716,,,
+RQ1,mean_pct,child,12,28.8886,26.3698,31.6251,95% bootstrap CI of the mean
+RQ1,sd_pct,child,12,4.8187,,,
+RQ1,median_pct,child,12,28.7105,,,
+RQ1,p25_pct,child,12,24.4898,,,
+RQ1,p75_pct,child,12,31.0000,,,
+RQ1,p95_pct,child,12,36.6553,,,
+RQ1,p99_pct,child,12,38.5311,,,
+RQ1,diff_child_minus_adult_pp,child-adult,20,15.8749,12.1346,19.8709,"Welch t=7.57, one-sided p=5.6e-07 (session level)"
+RQ2,mean_pp,ai_dwell,4,16.8498,13.6829,20.7675,95% bootstrap CI of the mean
+RQ2,sd_pp,ai_dwell,4,4.0045,,,
+RQ2,median_pp,ai_dwell,4,16.0989,,,
+RQ2,p25_pp,ai_dwell,4,15.1397,,,
+RQ2,p75_pp,ai_dwell,4,17.8090,,,
+RQ2,p95_pp,ai_dwell,4,21.4700,,,
+RQ2,p99_pp,ai_dwell,4,22.2022,,,
+RQ2,mean_pp,human_dwell,4,-0.9748,-3.1150,1.0570,95% bootstrap CI of the mean
+RQ2,sd_pp,human_dwell,4,2.6209,,,
+RQ2,median_pp,human_dwell,4,-0.6244,,,
+RQ2,p25_pp,human_dwell,4,-2.3568,,,
+RQ2,p75_pp,human_dwell,4,0.7576,,,
+RQ2,p95_pp,human_dwell,4,1.4761,,,
+RQ2,p99_pp,human_dwell,4,1.6198,,,
+RQ2,mean_pp,no_dwell,4,4.2323,-0.8238,8.8727,95% bootstrap CI of the mean
+RQ2,sd_pp,no_dwell,4,6.0899,,,
+RQ2,median_pp,no_dwell,4,4.8421,,,
+RQ2,p25_pp,no_dwell,4,1.1122,,,
+RQ2,p75_pp,no_dwell,4,7.9621,,,
+RQ2,p95_pp,no_dwell,4,10.1475,,,
+RQ2,p99_pp,no_dwell,4,10.5846,,,
+RQ2,diff_aidwell_minus_humandwell_pp,ai_dwell-human_dwell,8,17.8246,14.0241,22.0577,"Welch t=7.45, one-sided p=0.0003 (account level)"
+RQ3,macro_f1,metadata_only,40,0.5807,0.4133,0.7254,95% bootstrap CI over test videos
+RQ3,macro_precision,metadata_only,40,0.7165,,,
+RQ3,macro_recall,metadata_only,40,0.6250,,,
+RQ3,macro_f1,visual,40,0.8749,0.7500,0.9742,95% bootstrap CI over test videos
+RQ3,macro_precision,visual,40,0.8759,,,
+RQ3,macro_recall,visual,40,0.8750,,,
+RQ3,macro_f1,audio,40,0.5908,0.4271,0.7333,95% bootstrap CI over test videos
+RQ3,macro_precision,audio,40,0.6099,,,
+RQ3,macro_recall,audio,40,0.6000,,,
+RQ3,macro_f1,multimodal,40,0.8749,0.7500,0.9742,95% bootstrap CI over test videos
+RQ3,macro_precision,multimodal,40,0.8759,,,
+RQ3,macro_recall,multimodal,40,0.8750,,,
+RQ3,gain_multimodal_minus_metadata,multimodal-metadata_only,40,0.2942,0.1264,0.4675,threshold 0.05: reached (point estimate)
+guardrail,error_rate_unavailable_pct,adult,8,2.0000,,,PASS (<= 5%)
+guardrail,error_rate_unavailable_pct,child,72,2.0000,,,PASS (<= 5%)
+guardrail,cohen_kappa,double-coded videos,100,0.7595,,,PASS (>= 0.7)
+guardrail,baseline_sessions,adult,8,8.0000,,,PASS (>= 3)
+guardrail,baseline_sessions,child,12,12.0000,,,PASS (>= 3)
+guardrail,accounts_per_arm,ai_dwell,4,4.0000,,,PASS (>= 3)
+guardrail,accounts_per_arm,human_dwell,4,4.0000,,,PASS (>= 3)
+guardrail,accounts_per_arm,no_dwell,4,4.0000,,,PASS (>= 3)
