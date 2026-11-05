@@ -8,7 +8,7 @@ This file formalises what the project measures: the classifier and its loss (RQ3
 |---|---|---|
 | $i$ | index of a labelled video | 1 … n |
 | $x_i \in \mathbb{R}^d$ | feature vector of video $i$ (title length, AI tag, visual artifact score, audio synthetic score) | scores in [0, 1] |
-| $y_i \in \{0, 1\}$ | final label: 1 = AI-generated, 0 = human-made | – |
+| $y_i \in \lbrace 0, 1 \rbrace$ | final label: 1 = AI-generated, 0 = human-made | – |
 | $z_i$ | standardised features, $z_i = (x_i - \mu) / \sigma$ (statistics of the training set only) | – |
 | $w, b$ | classifier weights and bias | – |
 | $\sigma(t)$ | logistic function, $\sigma(t) = 1 / (1 + e^{-t})$ | (0, 1) |
@@ -18,7 +18,7 @@ This file formalises what the project measures: the classifier and its loss (RQ3
 | $s_j$ | AI share of session $j$ | % |
 | $n_{req}, n_{unav}, n_{ai}$ | requested videos (100), unavailable videos, AI-generated videos in a session | counts |
 | $d_a$ | change in AI share of account $a$ (session 5 minus baseline) | percentage points (pp) |
-| $B$ | number of bootstrap resamples ($B = 10\,000$, seed 42) | – |
+| $B$ | number of bootstrap resamples ($B = 10000$, seed 42) | – |
 
 ## 2. Classifier and loss function (RQ3)
 
@@ -38,12 +38,12 @@ All feature sets use the same model, the same $C = 1$ (no hyper-parameter search
 
 ## 3. Target metrics (RQ3)
 
-For class $c \in \{0, 1\}$:
+For class $c \in \lbrace 0, 1 \rbrace$:
 
 $$
 \mathrm{Precision}_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FP}_c}, \qquad
 \mathrm{Recall}_c = \frac{\mathrm{TP}_c}{\mathrm{TP}_c + \mathrm{FN}_c}, \qquad
-F1_c = \frac{2\,\mathrm{TP}_c}{2\,\mathrm{TP}_c + \mathrm{FP}_c + \mathrm{FN}_c}
+F1_c = \frac{2\mathrm{TP}_c}{2\mathrm{TP}_c + \mathrm{FP}_c + \mathrm{FN}_c}
 $$
 
 The primary metric is the macro-averaged F1 and the effect of interest is the gain over the baseline:
@@ -72,7 +72,7 @@ t = \frac{\bar{a} - \bar{c}}{\sqrt{s_a^2 / n_a + s_c^2 / n_c}}
 $$
 
 - **Guardrails:**
-  - error rate $= \sum n_{unav} / \sum n_{req} \le 5\,\%$ per group;
+  - error rate $= \sum n_{unav} / \sum n_{req} \le 5\%$ per group;
   - Cohen's $\kappa = \dfrac{p_o - p_e}{1 - p_e} \ge 0.70$ between the two annotators ($p_o$ observed agreement, $p_e$ chance agreement);
   - at least 3 sessions per profile group and 3 accounts per arm.
 
